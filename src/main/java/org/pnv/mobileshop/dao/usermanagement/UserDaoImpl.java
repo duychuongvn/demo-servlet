@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
+import org.pnv.mobileshop.dao.BaseDao;
 import org.pnv.mobileshop.dao.exception.UserAlreadyExistException;
 import org.pnv.mobileshop.dao.exception.UserNotFoundException;
 
@@ -15,7 +16,7 @@ import org.pnv.mobileshop.dao.exception.UserNotFoundException;
  * Created by huynhduychuong on Nov 13, 2016.
  * 
  */
-public class UserDaoImpl implements UserDao{
+public class UserDaoImpl extends BaseDao implements UserDao{
 
     private List<User> persistentUsers = new ArrayList<User>();
     
