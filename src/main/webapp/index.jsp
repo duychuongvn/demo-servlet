@@ -3,7 +3,7 @@
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <html>
 <head>
-<title>Login</title>
+<title>Welcome</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link
 	href="<%=request.getContextPath()%>/resources/css/bootstrap/bootstrap.min.css"
@@ -17,32 +17,10 @@
 	src="<%=request.getContextPath()%>/resources/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container center_div">
-    <br/>
-    <br/>
-	 <c:if test="${not empty error }">
-           <span class="alert alert-danger" >${error}</span>
-     </c:if>
-       
-        <div><h2>Mobile Shop Application</h2></div>
-        <div id="loginForm">
-		<form action="login.do" method="post"  class="login-form">
-
-			<div class="form-group">
-				<label for="usr">UserName:</label> <input type="text"
-					class="form-control" id="username" name="username"  placeholder="Enter Username">
-			</div>
-			<div class="form-group">
-				<label for="pwd">Password:</label> <input type="password"
-					class="form-control" id="password" name="password"  placeholder="Enter password">
-			</div>
-			<div class="form-group">
-               <button type="submit" class="btn btn-primary">Login</button>
-            </div>
-		</form>
-		<a href="#" class="">Lost your password?</a>
-		<a href="#" class="">New User?</a>
-		</div>
-	</div>
+Welcome to mobile shop!
+<br/>
+<a href="login.do">Login</a>
+   
+    
 </body>
 </html>
