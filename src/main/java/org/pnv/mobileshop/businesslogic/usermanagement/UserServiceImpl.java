@@ -3,19 +3,17 @@ package org.pnv.mobileshop.businesslogic.usermanagement;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.plaf.ListUI;
-
+import org.pnv.mobileshop.dao.DaoFactory;
 import org.pnv.mobileshop.dao.exception.UserNotFoundException;
 import org.pnv.mobileshop.dao.usermanagement.User;
 import org.pnv.mobileshop.dao.usermanagement.UserDao;
-import org.pnv.mobileshop.dao.usermanagement.UserDaoImpl;
 
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao;
 
     public UserServiceImpl() {
-        userDao = new UserDaoImpl();
+        userDao = DaoFactory.getDao(UserDao.class);
     }
 
     public List<UserModel> getUserList() {

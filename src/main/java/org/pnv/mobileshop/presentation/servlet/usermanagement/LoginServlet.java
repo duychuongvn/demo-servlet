@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.StringUtils;
+import org.pnv.mobileshop.businesslogic.ServiceFactory;
 import org.pnv.mobileshop.businesslogic.usermanagement.UserService;
-import org.pnv.mobileshop.businesslogic.usermanagement.UserServiceImpl;
 import org.pnv.mobileshop.dao.exception.UserNotFoundException;
 import org.pnv.mobileshop.dao.usermanagement.User;
 import org.slf4j.Logger;
@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
 
     private static final long serialVersionUID = -2253548733814099606L;
     private Logger logger = LoggerFactory.getLogger(LoginServlet.class);
-    private UserService userService = new UserServiceImpl();
+    private UserService userService =  ServiceFactory.getService(UserService.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -2,13 +2,11 @@ package org.pnv.mobileshop.dao.productmanagement;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 
 import org.pnv.mobileshop.core.exception.TenchicalException;
-import org.pnv.mobileshop.dao.BaseDao;
+import org.pnv.mobileshop.dao.BaseDaoImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * Created by huynhduychuong on Nov 13, 2016.
  *
  */
-public class ProductDaoImpl extends BaseDao implements ProductDao{
+public class ProductDaoImpl extends BaseDaoImpl<Product, Integer> implements ProductDao {
 
     private Logger logger = LoggerFactory.getLogger(ProductDaoImpl.class);
     /* (non-Javadoc)

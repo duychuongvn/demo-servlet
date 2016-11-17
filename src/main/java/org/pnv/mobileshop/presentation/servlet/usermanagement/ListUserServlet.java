@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.pnv.mobileshop.businesslogic.ServiceFactory;
 import org.pnv.mobileshop.businesslogic.usermanagement.UserService;
-import org.pnv.mobileshop.businesslogic.usermanagement.UserServiceImpl;
 
 /**
  * Created by huynhduychuong on Nov 13, 2016.
@@ -23,7 +23,7 @@ public class ListUserServlet extends HttpServlet {
     private UserService userService;
     
     public ListUserServlet() {
-        userService = new UserServiceImpl();
+        userService = ServiceFactory.getService(UserService.class);
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
